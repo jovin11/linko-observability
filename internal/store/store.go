@@ -28,7 +28,7 @@ const (
 )
 
 type Store struct {
-	dir string
+	dir    string
 	logger *log.Logger
 }
 
@@ -37,7 +37,7 @@ func New(dir string, logger *log.Logger) (*Store, error) {
 		return nil, err
 	}
 	return &Store{
-		dir: dir,
+		dir:    dir,
 		logger: logger,
 	}, nil
 }

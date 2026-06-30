@@ -2,8 +2,8 @@ package main
 
 import (
 	"context"
-	"net/http"
 	"golang.org/x/crypto/bcrypt"
+	"net/http"
 )
 
 type contextKey string

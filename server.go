@@ -1,14 +1,14 @@
 package main
 
 import (
+	"boot.dev/linko/internal/store"
 	"context"
 	"errors"
 	"fmt"
+	"log"
 	"net"
 	"net/http"
 	"os"
-	"log"
-	"boot.dev/linko/internal/store"
 )
 
 type server struct {
@@ -30,7 +30,7 @@ func newServer(store store.Store, port int, cancel context.CancelFunc, logger *l
 		httpServer: srv,
 		store:      store,
 		cancel:     cancel,
-		logger: 	logger,
+		logger:     logger,
 	}
 
 	mux.HandleFunc("GET /", s.handlerIndex)
